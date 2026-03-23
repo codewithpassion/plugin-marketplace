@@ -116,6 +116,7 @@ COMMANDS=(
     "${CLAUDE_CMD} plugin marketplace add ${REPO}"
     "${CLAUDE_CMD} plugin install cwp-claude-framework@${MARKETPLACE}${SCOPE_FLAG}"
     "${CLAUDE_CMD} plugin install cwp-how-i-vibe@${MARKETPLACE}${SCOPE_FLAG}"
+    "${CLAUDE_CMD} plugin install mcp-ui-expert@${MARKETPLACE}${SCOPE_FLAG}"
 )
 
 # Show what will be executed

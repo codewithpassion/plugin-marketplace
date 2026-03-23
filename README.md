@@ -12,6 +12,7 @@ This marketplace serves as a catalog of Claude Code plugins that can be easily d
 |--------|-------------|
 | `cwp-claude-framework` | Personal toolkit of reusable Claude commands and utilities |
 | `cwp-how-i-vibe` | Dom's step by step framework for agentic engineering |
+| `mcp-ui-expert` | Expert-level guidance for building MCP Apps with rich interactive UIs on Cloudflare Workers |
 
 ## Prerequisites
 
@@ -77,6 +78,7 @@ claude plugin marketplace add codewithpassion/cwp-claude-marketplace
 # Install individual plugins
 claude plugin install cwp-claude-framework@cwp-claude-marketplace
 claude plugin install cwp-how-i-vibe@cwp-claude-marketplace
+claude plugin install mcp-ui-expert@cwp-claude-marketplace
 ```
 
 ### From Within Claude Code

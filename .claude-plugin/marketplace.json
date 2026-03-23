@@ -26,6 +26,15 @@
       "author": {
         "name": "Dominik Fretz"
       }
+    },
+    {
+      "name": "mcp-ui-expert",
+      "source": { "source": "github", "repo": "codewithpassion/agent-mcp-ui-expert-plugin" },
+      "description": "Expert-level guidance for building MCP Apps with rich interactive UIs on Cloudflare Workers",
+      "version": "0.1.0",
+      "author": {
+        "name": "Dominik Fretz"
+      }
     }
   ]
 }
