@@ -24,7 +24,7 @@ This marketplace serves as a catalog of Claude Code plugins that can be easily d
 Install the marketplace and all plugins with a single command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh | bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh)"
 ```
 
 This will show the commands to be executed and ask for confirmation before proceeding.
@@ -50,19 +50,19 @@ Which command do you want to use? [1-3]
 Specify the Claude command directly:
 
 ```bash
-curl -fsSL ... | bash -s -- --cmd mclaude
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh)" -- --cmd mclaude
 ```
 
 Specify the installation scope:
 
 ```bash
-curl -fsSL ... | bash -s -- --scope project
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh)" -- --scope project
 ```
 
 Combine options:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh | bash -s -- --cmd zclaude --scope user
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh)" -- --cmd zclaude --scope user
 ```
 
 ## Manual Installation

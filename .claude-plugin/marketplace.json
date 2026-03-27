@@ -6,9 +6,18 @@
   },
   "metadata": {
     "description": "Claude Code plugin marketplace",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
+    {
+      "name": "cwp-claude-progress",
+      "source": "./plugins/cwp-claude-progress",
+      "description": "A plugin to write a PROGRESS.md file with the current progress of a task or project. Create a PROGRESS.md file to get started.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Dominik Fretz"
+      }
+    },
     {
       "name": "cwp-claude-framework",
       "source": "./plugins/cwp-claude-framework",

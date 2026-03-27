@@ -1,0 +1,13 @@
+{
+  "name": "cwp-claude-progress",
+  "version": "1.0.0",
+  "description": "Auto-updates PROGRESS.md at the end of each session. Requires a PROGRESS.md file in the root of the project.",
+  "hooks": {
+    "Stop": [
+      {
+        "type": "prompt",
+        "prompt_file": "hooks/stop-progress.md"
+      }
+    ]
+  }
+}

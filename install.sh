@@ -2,8 +2,8 @@
 set -e
 
 # cwp-claude-marketplace installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh | bash
-# With specific command: curl -fsSL ... | bash -s -- --cmd mclaude
+# Usage: bash -c "$(curl -fsSL https://raw.githubusercontent.com/codewithpassion/cwp-claude-marketplace/main/install.sh)"
+# With specific command: bash -c "$(curl -fsSL ...)" -- --cmd mclaude
 
 REPO="codewithpassion/cwp-claude-marketplace"
 MARKETPLACE="cwp-claude-marketplace"
@@ -16,6 +16,18 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
+
+# Function to read user input (works with curl | bash)
+read_input() {
+    if [[ -t 0 ]]; then
+        read "$@"
+    elif [[ -e /dev/tty ]]; then
+        read "$@" < /dev/tty
+    else
+        # No tty available, return empty (will use defaults)
+        return 1
+    fi
+}
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -73,7 +85,7 @@ if [[ -d "$CC_MIRROR_DIR" ]]; then
         echo ""
 
         echo -e "${YELLOW}Which command do you want to use? [1-$((i-1))]${NC} "
-        read -r choice < /dev/tty
+        read_input -r choice || choice=""
 
         if [[ "$choice" =~ ^[0-9]+$ ]]; then
             if [[ "$choice" -eq 1 ]]; then
@@ -129,7 +141,7 @@ echo ""
 
 # Ask for confirmation
 echo -e "${YELLOW}Do you want to proceed? [y/N]${NC} "
-read -r response < /dev/tty
+read_input -r response || response=""
 
 if [[ ! "$response" =~ ^[Yy]$ ]]; then
     echo ""
