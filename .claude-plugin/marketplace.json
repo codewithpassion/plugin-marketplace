@@ -44,6 +44,15 @@
       "author": {
         "name": "Dominik Fretz"
       }
+    },
+    {
+      "name": "claude-forge-agents",
+      "source": { "source": "github", "repo": "codewithpassion/claude-forge-agents" },
+      "description": "Three specialized agents (Forge, Sage, Muse) for structured software engineering: implementation, research, and planning",
+      "version": "0.1.0",
+      "author": {
+        "name": "Dominik Fretz"
+      }
     }
   ]
 }
